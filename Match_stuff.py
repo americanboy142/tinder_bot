@@ -1,9 +1,4 @@
 import tinder_api_sms
-import config
-import maya
-from datetime import date,time
-import features
-import time
 import random
 
 messages = ["If you where a transformer you would be optimus fine",
