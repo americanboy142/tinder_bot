@@ -1,11 +1,10 @@
-import tinder_api
 import tinder_api_sms
-import config
 import maya
-from datetime import date,time
-import features
+from datetime import date
 import time
 
+gender = 1 #set to 1 or 0 // 1 = female, 0 = male
+age = 22 #set age to max age
 
 canSwipe = True
 while canSwipe:
@@ -27,7 +26,7 @@ while canSwipe:
 
 
 
-        if (canSwipe and person_age <= 22 and gender == 1):
+        if (canSwipe and person_age <= age and gender == gender):
             result = tinder_api_sms.like(person_id)
             print(person_name, person_bio, person_age)
             canSwipe = result.get('likes_remaining')
